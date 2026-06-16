@@ -1,0 +1,14 @@
+# Security
+.env
+
+# Python Environments
+env/
+__pycache__/
+*.pyc
+
+# Node and Next.js
+node_modules/
+.next/
+
+# Database (Optional: remove this if you want to upload your existing manuals, but usually we build the DB on the server)
+# chroma_db/
