@@ -19,6 +19,16 @@ vector_db = Chroma(persist_directory="./chroma_db", embedding_function=embedding
 
 # 2. Initialize the Server
 app = FastAPI(title="Diagnostic Copilot Engine")
+from fastapi.middleware.cors import CORSMiddleware
+
+# Allow all origins for development in Codespaces
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # 3. Configure CORS
 app.add_middleware(
